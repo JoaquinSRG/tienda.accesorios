@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestras Tiendas y Contacto</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #003366;
+        color: #fff;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      header nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      header nav a:hover,
+      header nav a.active {
+        background-color: #0066cc;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      main h1,
+      main h2 {
+        text-align: center;
+        color: #003366;
+        margin-bottom: 20px;
+      }
+
+      .stores-section p,
+      .contact-section p {
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .stores-section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .stores-section ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #555;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background: #f9f9f9;
+      }
+
+      form input:focus,
+      form textarea:focus {
+        border-color: #0066cc;
+        outline: none;
+        background: #fff;
+      }
+
+      form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #0066cc;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      form button:hover {
+        background-color: #003366;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #003366;
+        color: #fff;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="products.html">Productos</a>
+        <a href="about.html">Quiénes Somos</a>
+        <a href="policies.html">Políticas</a>
+        <a href="stores-contact.html" class="active">Tiendas y Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="stores-section">
+        <h1>Nuestras Tiendas</h1>
+        <p>
+          Visítanos en cualquiera de nuestras sucursales. Nos encontramos en los
+          siguientes lugares:
+        </p>
+        <ul>
+          <li>
+            <strong>Sucursal Ciudad de México:</strong> Avenida Insurgentes Sur
+            1234, Colonia Del Valle, Ciudad de México.
+          </li>
+          <li>
+            <strong>Sucursal Guadalajara:</strong> Calle Juárez 567, Zona
+            Centro, Guadalajara, Jalisco.
+          </li>
+          <li>
+            <strong>Sucursal Monterrey:</strong> Avenida Constitución 789,
+            Colonia Mirador, Monterrey, Nuevo León.
+          </li>
+          <li>
+            <strong>Sucursal Cancún:</strong> Plaza Kukulkán, Local 45, Zona
+            Hotelera, Cancún, Quintana Roo.
+          </li>
+          <li>
+            <strong>Sucursal Mérida:</strong> Paseo de Montejo 234, Centro
+            Histórico, Mérida, Yucatán.
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact-section">
+        <h2>Contáctanos</h2>
+        <p>
+          ¿Tienes preguntas o comentarios? Llena el formulario a continuación y
+          nos pondremos en contacto contigo.
+        </p>
+        <form action="submit_contact.php" method="POST">
+          <label for="name">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Tu nombre"
+            required
+          />
+
+          <label for="email">Correo Electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+
+          <label for="message">Mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
